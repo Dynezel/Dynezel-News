@@ -1,0 +1,46 @@
+/* === ARTÍCULO === */
+.article-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.article-main-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.article-meta {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.article-body p {
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+}
+
+.article-quote {
+  font-style: italic;
+  border-left: 4px solid var(--color-primary);
+  padding-left: 12px;
+  margin: 20px 0;
+  color: #555;
+}
+
+.article-image-center {
+  text-align: center;
+  margin: 20px 0;
+}
