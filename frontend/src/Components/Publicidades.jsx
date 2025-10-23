@@ -5,22 +5,19 @@ export default function Publicidades() {
   const [adsCount, setAdsCount] = useState(0);
   const socialBarAdded = useRef(false);
 
-  // Función auxiliar para ejecutar scripts recién agregados
+  // Ejecuta los scripts recién agregados
   const executeScripts = (element) => {
     const scripts = element.querySelectorAll("script");
     scripts.forEach((oldScript) => {
       const newScript = document.createElement("script");
-      if (oldScript.src) {
-        newScript.src = oldScript.src;
-      } else {
-        newScript.textContent = oldScript.textContent;
-      }
+      if (oldScript.src) newScript.src = oldScript.src;
+      else newScript.textContent = oldScript.textContent;
       newScript.async = true;
       oldScript.parentNode.replaceChild(newScript, oldScript);
     });
   };
 
-  // Función para agregar un bloque de anuncios aleatorio
+  // Agrega un bloque de anuncio
   const addAdBlock = () => {
     if (!containerRef.current) return;
 
@@ -28,7 +25,7 @@ export default function Publicidades() {
     adWrapper.style.margin = "20px 0";
     adWrapper.style.textAlign = "center";
 
-    const adType = adsCount % 5; // alternar tipos
+    const adType = adsCount % 5;
 
     switch (adType) {
       case 0:
@@ -69,15 +66,14 @@ export default function Publicidades() {
         adWrapper.innerHTML = `
           <a href="https://www.effectivegatecpm.com/a0k4dfde5j?key=342c6df7fbcb7758465cf00fa38051d4"
              target="_blank"
-             rel="noopener noreferrer">🔗 Ver oferta</a>
+             rel="noopener noreferrer"
+             style="display:inline-block;margin:10px 0;font-weight:bold;font-size:18px;">🔗 Ver oferta</a>
         `;
         break;
       case 4:
         adWrapper.innerHTML = `
           <script type="text/javascript" src="//pl27912701.effectivegatecpm.com/02/2f/40/022f40f31ed89c503cc29279a0d2de57.js"></script>
         `;
-        break;
-      default:
         break;
     }
 
@@ -86,9 +82,21 @@ export default function Publicidades() {
     setAdsCount((prev) => prev + 1);
   };
 
-  // Agregar bloque inicial
+  // Agregar anuncios iniciales hasta que haya scroll
   useEffect(() => {
+    const ensureScrollable = () => {
+      const { scrollHeight, clientHeight } = document.documentElement;
+      let added = 0;
+
+      // Agregar más anuncios hasta que haya scroll (máximo 10 intentos)
+      while (scrollHeight <= clientHeight && added < 10) {
+        addAdBlock();
+        added++;
+      }
+    };
+
     addAdBlock();
+    setTimeout(ensureScrollable, 800); // esperar un poco para que se rendericen
   }, []);
 
   // Scroll infinito
@@ -97,14 +105,14 @@ export default function Publicidades() {
       const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
 
       if (scrollTop + clientHeight >= scrollHeight - 100) {
-        // Agregar 2 o 3 bloques por scroll
+        // Agrega 2-3 anuncios más
         const blocksToAdd = Math.floor(Math.random() * 2) + 2;
         for (let i = 0; i < blocksToAdd; i++) addAdBlock();
 
-        // Agregar Social Bar al final solo una vez
+        // Agrega Social Bar una sola vez
         if (!socialBarAdded.current && containerRef.current) {
           const socialBarWrapper = document.createElement("div");
-          socialBarWrapper.style.margin = "30px 0";
+          socialBarWrapper.style.margin = "40px 0";
           socialBarWrapper.style.textAlign = "center";
           socialBarWrapper.innerHTML = `
             <script type='text/javascript' src='//pl27912697.effectivegatecpm.com/4d/d5/c1/4dd5c130e5d831b8770dc2cddc1b6122.js'></script>
@@ -129,9 +137,7 @@ export default function Publicidades() {
         padding: "20px",
       }}
     >
-      <h1 style={{ textAlign: "center", marginBottom: "20px" }}>
-        💰 Publicidades
-      </h1>
+      <h1 style={{ textAlign: "center", marginBottom: "20px" }}>💰 Publicidades</h1>
     </div>
   );
 }
