@@ -13,6 +13,7 @@ import "./css/layout.css";
 import "./css/homepage.css";
 import "./css/articulo.css";
 import "./css/responsive.css";
+import Publicidades from "./Components/Publicidades";
 
 // ✅ Layout global con Header
 function RootLayout() {
@@ -32,6 +33,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Homepage />} />
       <Route path="articulo/:id" element={<Articulo />} />
+      <Route path="/publicidades" element={<Publicidades />} />
     </Route>
   )
 );
