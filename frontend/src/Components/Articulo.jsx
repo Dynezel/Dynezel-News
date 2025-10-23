@@ -6,7 +6,7 @@ export default function Articulo() {
   const [articulo, setArticulo] = useState(null);
 
   useEffect(() => {
-    fetch(`/api/articulos/${id}`)
+    fetch(`${BACKEND_URL}/api/articulos/${id}`)
       .then(res => res.json())
       .then(data => setArticulo(data))
       .catch(err => console.error(err));
