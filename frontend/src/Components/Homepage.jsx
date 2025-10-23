@@ -5,7 +5,7 @@ export default function Homepage() {
   const [articulos, setArticulos] = useState([]);
 
   useEffect(() => {
-    fetch("/api/articulos")
+    fetch(`${BACKEND_URL}/api/articulos`)
       .then(res => res.json())
       .then(data => setArticulos(data))
       .catch(err => console.error(err));
@@ -24,13 +24,13 @@ export default function Homepage() {
                     {primeraImagen && (
                       <div className="article-image">
                         <img
-                          src={`${primeraImagen.src}`}
+                          src={`${BACKEND_URL}${primeraImagen.src}`}
                           alt={primeraImagen.alt}
                         />
                       </div>
                     )}
                     <div className="article-text">
-                      <Link to={`/articulo/${a.id}`} className="article-title">
+                      <Link to={`${BACKEND_URL}/articulo/${a.id}`} className="article-title">
                         {a.titulo}
                       </Link>
                       <p className="article-meta">
@@ -48,7 +48,7 @@ export default function Homepage() {
             <ul>
               {articulos.slice(0, 5).map(a => (
                 <li key={a.id}>
-                  <Link to={`/articulo/${a.id}`} className="sidebar-link">
+                  <Link to={`${BACKEND_URL}/articulo/${a.id}`} className="sidebar-link">
                     {a.titulo}
                   </Link>
                 </li>
