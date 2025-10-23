@@ -60,5 +60,53 @@
         "texto": "El futuro del trabajo será una colaboración entre humanos y máquinas, no un reemplazo completo."
       }
     ]
+  },
+  
+  {
+    "id": 3,
+    "titulo": "Vladimir Kramnik podría enfrentar sanciones por su trato hacia Daniel Naroditsky",
+    "autorTraduccion": "Dylan Fernández",
+    "fechaPublicacion": "2025-10-23",
+    "fuente": {
+      "tituloOriginal": "Former world chess champion Vladimir Kramnik may face discipline for treatment of Daniel Naroditsky",
+      "medio": "New York Post",
+      "fecha": "2025-10-23",
+      "enlace": "https://nypost.com/2025/10/23/world-news/former-world-chess-champion-vladimir-kramnik-may-face-discipline-for-treatment-of-daniel-naroditsky/"
+    },
+    "contenido": [
+      {
+        "tipo": "p",
+        "texto": "El excampeón mundial de ajedrez, Vladimir Kramnik, podría enfrentar sanciones por parte de la Federación Internacional de Ajedrez (FIDE) debido a su comportamiento hacia el gran maestro estadounidense Daniel Naroditsky."
+      },
+      {
+        "tipo": "img",
+        "src": "/images/kramnik-naroditsky.jpg",
+        "alt": "Vladimir Kramnik durante una partida de ajedrez"
+      },
+      {
+        "tipo": "p",
+        "texto": "Según informes, la FIDE está evaluando posibles medidas disciplinarias tras varios comentarios y publicaciones realizadas por Kramnik en línea, en los que ha cuestionado y criticado a otros jugadores, incluido Naroditsky."
+      },
+      {
+        "tipo": "p",
+        "texto": "Kramnik, quien fue campeón mundial de ajedrez entre 2000 y 2007, ha estado envuelto en una serie de controversias en los últimos años, especialmente por sus declaraciones sobre el uso de computadoras y la supuesta trampa en partidas en línea."
+      },
+      {
+        "tipo": "p",
+        "texto": "La FIDE señaló que está comprometida en garantizar un ambiente de respeto y profesionalismo dentro de la comunidad ajedrecística, tanto en torneos presenciales como en plataformas digitales."
+      },
+      {
+        "tipo": "cita",
+        "texto": "“No se tolerará ningún tipo de acoso o conducta inapropiada hacia otros jugadores”, declaró un portavoz de la FIDE."
+      },
+      {
+        "tipo": "p",
+        "texto": "Por su parte, Naroditsky, quien también es comentarista y creador de contenido, no ha respondido públicamente a los comentarios de Kramnik, manteniendo el enfoque en su labor educativa dentro del ajedrez."
+      },
+      {
+        "tipo": "p",
+        "texto": "La posible sanción marcaría otro capítulo en la relación tensa entre Kramnik y las instituciones oficiales del ajedrez, un conflicto que ha llamado la atención de toda la comunidad internacional."
+      }
+    ]
   }
 ]
