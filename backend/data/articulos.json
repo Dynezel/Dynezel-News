@@ -1,69 +1,6 @@
 [
   {
     "id": 1,
-    "titulo": "Cambio climático y su impacto global",
-    "autorTraduccion": "Dylan Fernández",
-    "fechaPublicacion": "2025-10-17",
-    "fuente": {
-      "tituloOriginal": "Climate Change and Its Global Impact",
-      "medio": "The New York Times",
-      "fecha": "2025-10-10",
-      "enlace": "https://www.nytimes.com/example-climate"
-    },
-    "contenido": [
-      {
-        "tipo": "p",
-        "texto": "El cambio climático es uno de los desafíos más urgentes del siglo XXI."
-      },
-      {
-        "tipo": "img",
-        "src": "/images/calentamiento.jpg",
-        "alt": "Calentamiento global"
-      },
-      {
-        "tipo": "p",
-        "texto": "Los fenómenos extremos se vuelven más frecuentes, afectando ecosistemas y comunidades alrededor del mundo."
-      },
-      {
-        "tipo": "cita",
-        "texto": "No podemos ignorar los signos del cambio climático; nuestras decisiones actuales definirán el futuro del planeta."
-      }
-    ]
-  },
-  {
-    "id": 2,
-    "titulo": "La inteligencia artificial y el futuro del trabajo",
-    "autorTraduccion": "Laura Gómez",
-    "fechaPublicacion": "2025-10-15",
-    "fuente": {
-      "tituloOriginal": "Artificial Intelligence and the Future of Work",
-      "medio": "The Guardian",
-      "fecha": "2025-10-05",
-      "enlace": "https://www.theguardian.com/example-ai"
-    },
-    "contenido": [
-      {
-        "tipo": "p",
-        "texto": "La IA está transformando industrias enteras, automatizando tareas repetitivas y generando nuevas oportunidades."
-      },
-      {
-        "tipo": "img",
-        "src": "/images/inteligencia-artificial.jpg",
-        "alt": "Inteligencia artificial"
-      },
-      {
-        "tipo": "span",
-        "texto": "Pero también plantea desafíos éticos importantes sobre privacidad y empleo."
-      },
-      {
-        "tipo": "cita",
-        "texto": "El futuro del trabajo será una colaboración entre humanos y máquinas, no un reemplazo completo."
-      }
-    ]
-  },
-  
-  {
-    "id": 3,
     "titulo": "Vladimir Kramnik podría enfrentar sanciones por su trato hacia Daniel Naroditsky",
     "autorTraduccion": "Dylan Fernández",
     "fechaPublicacion": "2025-10-23",
@@ -114,7 +51,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 2,
     "titulo": "Los Knicks inician la era Mike Brown con una victoria por 119-111 sobre los Cavaliers",
     "autorTraduccion": "Dylan Fernández",
     "fechaPublicacion": "2025-10-22",
