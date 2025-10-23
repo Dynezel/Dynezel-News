@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 export default function Publicidades() {
   const containerRef = useRef(null);
   const socialBarAdded = useRef(false);
-  const [blocksCount, setBlocksCount] = useState(0);
+  const [adsCount, setAdsCount] = useState(0);
 
   // Función para crear scripts
   const createScript = (src, async = true) => {
@@ -13,88 +13,93 @@ export default function Publicidades() {
     return script;
   };
 
-  // Crear un bloque con TODOS los anuncios
-  const addExtremeAdBlock = () => {
+  // Función para agregar un bloque de anuncio
+  const addAdBlock = () => {
     if (!containerRef.current) return;
 
-    const blockWrapper = document.createElement("div");
-    blockWrapper.style.margin = "25px 0";
-    blockWrapper.style.textAlign = "center";
-    blockWrapper.style.border = "2px solid #f0f0f0";
-    blockWrapper.style.padding = "15px";
-    blockWrapper.style.backgroundColor = "#fff9e6";
+    const adWrapper = document.createElement("div");
+    adWrapper.style.margin = "20px 0";
+    adWrapper.style.textAlign = "center";
+    adWrapper.style.padding = "10px";
+    adWrapper.style.border = "1px solid #eee";
+    adWrapper.style.backgroundColor = "#fff9e6";
 
-    // Banner 300x250
-    const atOptions1 = document.createElement("script");
-    atOptions1.innerHTML = `
-      window.atOptions = {
-        key: "5e168af377442dcd43ef7f4999dae819",
-        format: "iframe",
-        height: 250,
-        width: 300,
-        params: {}
-      };
-    `;
-    blockWrapper.appendChild(atOptions1);
-    blockWrapper.appendChild(
-      createScript(
-        "//www.highperformanceformat.com/5e168af377442dcd43ef7f4999dae819/invoke.js"
-      )
-    );
+    const adType = adsCount % 5;
 
-    // Banner 320x50
-    const atOptions2 = document.createElement("script");
-    atOptions2.innerHTML = `
-      window.atOptions = {
-        key: "df786ecbc0198d98c3ece48457615f76",
-        format: "iframe",
-        height: 50,
-        width: 320,
-        params: {}
-      };
-    `;
-    blockWrapper.appendChild(atOptions2);
-    blockWrapper.appendChild(
-      createScript(
-        "//www.highperformanceformat.com/df786ecbc0198d98c3ece48457615f76/invoke.js"
-      )
-    );
+    switch (adType) {
+      case 0: // Banner 300x250
+        window.atOptions = {
+          key: "5e168af377442dcd43ef7f4999dae819",
+          format: "iframe",
+          height: 250,
+          width: 300,
+          params: {},
+        };
+        adWrapper.appendChild(
+          createScript(
+            "//www.highperformanceformat.com/5e168af377442dcd43ef7f4999dae819/invoke.js"
+          )
+        );
+        break;
 
-    // Native Banner
-    const containerNative = document.createElement("div");
-    containerNative.id = `container-feb5072d03cb15bc5abe1c885dd6e313-${blocksCount}`;
-    blockWrapper.appendChild(containerNative);
-    blockWrapper.appendChild(
-      createScript(
-        "//pl27912708.effectivegatecpm.com/feb5072d03cb15bc5abe1c885dd6e313/invoke.js"
-      )
-    );
+      case 1: // Banner 320x50
+        window.atOptions = {
+          key: "df786ecbc0198d98c3ece48457615f76",
+          format: "iframe",
+          height: 50,
+          width: 320,
+          params: {},
+        };
+        adWrapper.appendChild(
+          createScript(
+            "//www.highperformanceformat.com/df786ecbc0198d98c3ece48457615f76/invoke.js"
+          )
+        );
+        break;
 
-    // Smartlink
-    const link = document.createElement("a");
-    link.href =
-      "https://www.effectivegatecpm.com/a0k4dfde5j?key=342c6df7fbcb7758465cf00fa38051d4";
-    link.target = "_blank";
-    link.rel = "noopener noreferrer";
-    link.innerText = "🔗 Ver Oferta";
-    link.style.display = "block";
-    link.style.margin = "10px 0";
-    blockWrapper.appendChild(link);
+      case 2: // Native Banner
+        const containerNative = document.createElement("div");
+        containerNative.id = `container-feb5072d03cb15bc5abe1c885dd6e313-${adsCount}`;
+        adWrapper.appendChild(containerNative);
+        adWrapper.appendChild(
+          createScript(
+            "//pl27912708.effectivegatecpm.com/feb5072d03cb15bc5abe1c885dd6e313/invoke.js"
+          )
+        );
+        break;
 
-    // Popunder
-    blockWrapper.appendChild(
-      createScript(
-        "//pl27912701.effectivegatecpm.com/02/2f/40/022f40f31ed89c503cc29279a0d2de57.js"
-      )
-    );
+      case 3: // Smartlink
+        const link = document.createElement("a");
+        link.href =
+          "https://www.effectivegatecpm.com/a0k4dfde5j?key=342c6df7fbcb7758465cf00fa38051d4";
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.innerText = "🔗 Ver Oferta";
+        link.style.display = "block";
+        link.style.margin = "10px 0";
+        adWrapper.appendChild(link);
+        break;
 
-    containerRef.current.appendChild(blockWrapper);
-    setBlocksCount((prev) => prev + 1);
+      case 4: // Popunder
+        adWrapper.appendChild(
+          createScript(
+            "//pl27912701.effectivegatecpm.com/02/2f/40/022f40f31ed89c503cc29279a0d2de57.js"
+          )
+        );
+        break;
+
+      default:
+        break;
+    }
+
+    containerRef.current.appendChild(adWrapper);
+    setAdsCount((prev) => prev + 1);
   };
 
-  // Bloques iniciales
+  // Bloques iniciales al cargar la página
   useEffect(() => {
-    for (let i = 0; i < 3; i++) addExtremeAdBlock(); // 3 bloques iniciales
+    const initialBlocks = 7; // Cargar 7 bloques desde el inicio
+    for (let i = 0; i < initialBlocks; i++) addAdBlock();
   }, []);
 
   // Scroll infinito
@@ -104,9 +109,10 @@ export default function Publicidades() {
       const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
 
       if (scrollTop + clientHeight >= scrollHeight - 200) {
-        for (let i = 0; i < 2; i++) addExtremeAdBlock(); // 2 bloques por scroll
+        const blocksToAdd = Math.floor(Math.random() * 2) + 2; // 2-3 bloques
+        for (let i = 0; i < blocksToAdd; i++) addAdBlock();
 
-        // Social Bar al final, solo una vez
+        // Social Bar al final, una sola vez
         if (!socialBarAdded.current && scrollTop + clientHeight >= scrollHeight - 50) {
           const socialBarWrapper = document.createElement("div");
           socialBarWrapper.style.margin = "30px 0";
@@ -124,7 +130,7 @@ export default function Publicidades() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [blocksCount]);
+  }, [adsCount]);
 
   return (
     <div
