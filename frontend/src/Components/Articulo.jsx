@@ -13,6 +13,34 @@ export default function Articulo() {
       .catch(err => console.error(err));
   }, [id]);
 
+  //useEffect para ads:
+  useEffect(() => {
+  const script1 = document.createElement("script");
+  script1.type = "text/javascript";
+  script1.innerHTML = `
+    atOptions = {
+      'key' : '5e168af377442dcd43ef7f4999dae819',
+      'format' : 'iframe',
+      'height' : 250,
+      'width' : 300,
+      'params' : {}
+    };
+  `;
+  const script2 = document.createElement("script");
+  script2.type = "text/javascript";
+  script2.src = "//www.highperformanceformat.com/5e168af377442dcd43ef7f4999dae819/invoke.js";
+
+  const adContainer = document.getElementById("adsterra-article-banner");
+  if (adContainer) {
+    adContainer.appendChild(script1);
+    adContainer.appendChild(script2);
+  }
+
+  return () => {
+    if (adContainer) adContainer.innerHTML = "";
+  };
+}, []);
+
   if (!articulo) return <p className="loading">Cargando artículo...</p>;
 
   return (
@@ -67,6 +95,7 @@ export default function Articulo() {
             </a>
           </p>
         )}
+        <div id="adsterra-article-banner" style={{ textAlign: "center", marginTop: "25px" }}></div>
       </main>
     </div>
   );

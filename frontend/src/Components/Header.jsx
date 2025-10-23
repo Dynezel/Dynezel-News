@@ -5,7 +5,9 @@ export default function Header() {
   return (
     <header className="news-header">
       <div className="news-header-container">
+        <Link to="/">
         <h1 className="news-title">🗞️ Dynezel News</h1>
+        </Link>
 
         <nav className="news-nav">
           <Link to="/">Inicio</Link>

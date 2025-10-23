@@ -12,6 +12,34 @@ export default function Homepage() {
       .catch(err => console.error(err));
   }, []);
 
+  //useEffect para ads
+  useEffect(() => {
+  const script1 = document.createElement("script");
+  script1.type = "text/javascript";
+  script1.innerHTML = `
+    atOptions = {
+      'key' : 'df786ecbc0198d98c3ece48457615f76',
+      'format' : 'iframe',
+      'height' : 50,
+      'width' : 320,
+      'params' : {}
+    };
+  `;
+  const script2 = document.createElement("script");
+  script2.type = "text/javascript";
+  script2.src = "//www.highperformanceformat.com/df786ecbc0198d98c3ece48457615f76/invoke.js";
+
+  const adContainer = document.getElementById("adsterra-footer-banner");
+  if (adContainer) {
+    adContainer.appendChild(script1);
+    adContainer.appendChild(script2);
+  }
+
+  return () => {
+    if (adContainer) adContainer.innerHTML = "";
+  };
+}, []);
+
   return (
     <>
       <div className="container">
@@ -61,6 +89,7 @@ export default function Homepage() {
         <footer className="news-footer">
           © 2025 Dynezel News -- Noticias independientes en español
         </footer>
+        <div id="adsterra-footer-banner" style={{ textAlign: "center", marginTop: "10px" }}></div>
       </div>
     </>
   );
