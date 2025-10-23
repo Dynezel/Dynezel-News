@@ -5,14 +5,6 @@ export default function Publicidades() {
   const socialBarAdded = useRef(false);
   const [adsCount, setAdsCount] = useState(0);
 
-  // Función para crear scripts
-  const createScript = (src, async = true) => {
-    const script = document.createElement("script");
-    script.src = src;
-    script.async = async;
-    return script;
-  };
-
   // Función para agregar un bloque de anuncio
   const addAdBlock = () => {
     if (!containerRef.current) return;
@@ -27,7 +19,8 @@ export default function Publicidades() {
     const adType = adsCount % 5;
 
     switch (adType) {
-      case 0: // Banner 300x250
+      case 0: {
+        // Banner 300x250
         window.atOptions = {
           key: "5e168af377442dcd43ef7f4999dae819",
           format: "iframe",
@@ -35,14 +28,14 @@ export default function Publicidades() {
           width: 300,
           params: {},
         };
-        adWrapper.appendChild(
-          createScript(
-            "//www.highperformanceformat.com/5e168af377442dcd43ef7f4999dae819/invoke.js"
-          )
-        );
+        const script1 = document.createElement("script");
+        script1.src = "//www.highperformanceformat.com/5e168af377442dcd43ef7f4999dae819/invoke.js";
+        script1.async = true;
+        adWrapper.appendChild(script1);
         break;
-
-      case 1: // Banner 320x50
+      }
+      case 1: {
+        // Banner 320x50
         window.atOptions = {
           key: "df786ecbc0198d98c3ece48457615f76",
           format: "iframe",
@@ -50,28 +43,29 @@ export default function Publicidades() {
           width: 320,
           params: {},
         };
-        adWrapper.appendChild(
-          createScript(
-            "//www.highperformanceformat.com/df786ecbc0198d98c3ece48457615f76/invoke.js"
-          )
-        );
+        const script2 = document.createElement("script");
+        script2.src = "//www.highperformanceformat.com/df786ecbc0198d98c3ece48457615f76/invoke.js";
+        script2.async = true;
+        adWrapper.appendChild(script2);
         break;
-
-      case 2: // Native Banner
+      }
+      case 2: {
+        // Native Banner
+        const nativeId = `container-feb5072d03cb15bc5abe1c885dd6e313-${adsCount}`;
         const containerNative = document.createElement("div");
-        containerNative.id = `container-feb5072d03cb15bc5abe1c885dd6e313-${adsCount}`;
+        containerNative.id = nativeId;
         adWrapper.appendChild(containerNative);
-        adWrapper.appendChild(
-          createScript(
-            "//pl27912708.effectivegatecpm.com/feb5072d03cb15bc5abe1c885dd6e313/invoke.js"
-          )
-        );
-        break;
 
-      case 3: // Smartlink
+        const nativeScript = document.createElement("script");
+        nativeScript.src = "//pl27912708.effectivegatecpm.com/feb5072d03cb15bc5abe1c885dd6e313/invoke.js";
+        nativeScript.async = true;
+        adWrapper.appendChild(nativeScript);
+        break;
+      }
+      case 3: {
+        // Smartlink
         const link = document.createElement("a");
-        link.href =
-          "https://www.effectivegatecpm.com/a0k4dfde5j?key=342c6df7fbcb7758465cf00fa38051d4";
+        link.href = "https://www.effectivegatecpm.com/a0k4dfde5j?key=342c6df7fbcb7758465cf00fa38051d4";
         link.target = "_blank";
         link.rel = "noopener noreferrer";
         link.innerText = "🔗 Ver Oferta";
@@ -79,49 +73,46 @@ export default function Publicidades() {
         link.style.margin = "10px 0";
         adWrapper.appendChild(link);
         break;
-
-      case 4: // Popunder
-        adWrapper.appendChild(
-          createScript(
-            "//pl27912701.effectivegatecpm.com/02/2f/40/022f40f31ed89c503cc29279a0d2de57.js"
-          )
-        );
+      }
+      case 4: {
+        // Popunder
+        const popScript = document.createElement("script");
+        popScript.src = "//pl27912701.effectivegatecpm.com/02/2f/40/022f40f31ed89c503cc29279a0d2de57.js";
+        popScript.async = true;
+        adWrapper.appendChild(popScript);
         break;
-
+      }
       default:
         break;
     }
 
     containerRef.current.appendChild(adWrapper);
-    setAdsCount((prev) => prev + 1);
+    setAdsCount(prev => prev + 1);
   };
 
-  // Bloques iniciales al cargar la página
+  // Bloques iniciales
   useEffect(() => {
-    const initialBlocks = 7; // Cargar 7 bloques desde el inicio
-    for (let i = 0; i < initialBlocks; i++) addAdBlock();
+    for (let i = 0; i < 7; i++) addAdBlock(); // 7 bloques iniciales
   }, []);
 
   // Scroll infinito
   useEffect(() => {
     const handleScroll = () => {
-      if (!containerRef.current) return;
       const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
 
       if (scrollTop + clientHeight >= scrollHeight - 200) {
         const blocksToAdd = Math.floor(Math.random() * 2) + 2; // 2-3 bloques
         for (let i = 0; i < blocksToAdd; i++) addAdBlock();
 
-        // Social Bar al final, una sola vez
+        // Social Bar al final, solo una vez
         if (!socialBarAdded.current && scrollTop + clientHeight >= scrollHeight - 50) {
           const socialBarWrapper = document.createElement("div");
           socialBarWrapper.style.margin = "30px 0";
           socialBarWrapper.style.textAlign = "center";
-          socialBarWrapper.appendChild(
-            createScript(
-              "//pl27912697.effectivegatecpm.com/4d/d5/c1/4dd5c130e5d831b8770dc2cddc1b6122.js"
-            )
-          );
+          const socialScript = document.createElement("script");
+          socialScript.src = "//pl27912697.effectivegatecpm.com/4d/d5/c1/4dd5c130e5d831b8770dc2cddc1b6122.js";
+          socialScript.async = true;
+          socialBarWrapper.appendChild(socialScript);
           containerRef.current.appendChild(socialBarWrapper);
           socialBarAdded.current = true;
         }
