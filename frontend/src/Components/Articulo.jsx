@@ -48,7 +48,7 @@ export default function Articulo() {
                 return (
                   <div key={i} className="article-image-center">
                     <img
-                      src={`${bloque.src}`}
+                      src={`${BACKEND_URL}${bloque.src}`}
                       alt={bloque.alt}
                     />
                   </div>
