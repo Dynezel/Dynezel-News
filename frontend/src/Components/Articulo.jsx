@@ -15,29 +15,30 @@ export default function Articulo() {
 
   //useEffect para ads:
   useEffect(() => {
-  const script1 = document.createElement("script");
-  script1.type = "text/javascript";
-  script1.innerHTML = `
-    atOptions = {
-      'key' : '5e168af377442dcd43ef7f4999dae819',
-      'format' : 'iframe',
-      'height' : 250,
-      'width' : 300,
-      'params' : {}
-    };
-  `;
-  const script2 = document.createElement("script");
-  script2.type = "text/javascript";
-  script2.src = "//www.highperformanceformat.com/5e168af377442dcd43ef7f4999dae819/invoke.js";
-
   const adContainer = document.getElementById("adsterra-article-banner");
-  if (adContainer) {
-    adContainer.appendChild(script1);
-    adContainer.appendChild(script2);
-  }
+  if (!adContainer) return;
 
+  // Definir la variable globalmente
+  window.atOptions = {
+    key: "5e168af377442dcd43ef7f4999dae819",
+    format: "iframe",
+    height: 250,
+    width: 300,
+    params: {},
+  };
+
+  // Crear el script del anuncio
+  const script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "//www.highperformanceformat.com/5e168af377442dcd43ef7f4999dae819/invoke.js";
+
+  // Insertarlo en el contenedor
+  adContainer.appendChild(script);
+
+  // Cleanup: eliminar script y limpiar al desmontar
   return () => {
-    if (adContainer) adContainer.innerHTML = "";
+    adContainer.innerHTML = "";
+    delete window.atOptions;
   };
 }, []);
 
