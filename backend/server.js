@@ -12,10 +12,7 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
-const allowedOrigins = [
-  process.env.FRONTEND_URL,
-  "http://localhost:5173"
-];
+const allowedOrigins = process.env.CORS_ORIGIN?.split(",") || [];
 
 app.use(cors({
   origin: function (origin, callback) {
