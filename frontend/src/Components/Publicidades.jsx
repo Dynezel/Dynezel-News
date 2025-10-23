@@ -17,7 +17,7 @@ export default function Publicidades() {
   };
 
   // 🔥 Banner prioritario 728x90
-  const getAdultBanner728x90 = () => `
+  const getBanner728x90 = () => `
     <script type="text/javascript">
       atOptions = {
         'key' : '46f320f0867772036096c5feffd25336',
@@ -30,6 +30,26 @@ export default function Publicidades() {
     <script type="text/javascript" src="//www.highperformanceformat.com/46f320f0867772036096c5feffd25336/invoke.js"></script>
   `;
 
+  // 🔹 Banner secundario 300x250
+  const getBanner300x250 = () => `
+    <script type="text/javascript">
+      atOptions = {
+        'key' : '5e168af377442dcd43ef7f4999dae819',
+        'format' : 'iframe',
+        'height' : 250,
+        'width' : 300,
+        'params' : {}
+      };
+    </script>
+    <script type="text/javascript" src="//www.highperformanceformat.com/5e168af377442dcd43ef7f4999dae819/invoke.js"></script>
+  `;
+
+  // 🔹 Native Banner
+  const getNativeBanner = () => `
+    <script async="async" data-cfasync="false" src="//pl27912708.effectivegatecpm.com/feb5072d03cb15bc5abe1c885dd6e313/invoke.js"></script>
+    <div id="container-feb5072d03cb15bc5abe1c885dd6e313"></div>
+  `;
+
   const addAdBlock = () => {
     if (!containerRef.current) return;
 
@@ -37,31 +57,17 @@ export default function Publicidades() {
     adWrapper.style.margin = "20px 0";
     adWrapper.style.textAlign = "center";
 
-    // 🔁 Priorizamos el banner 728x90
+    // 🔁 Priorizamos banners que pagan
     let adHTML = "";
-    const adType = adsCount % 4; // Reducimos variedad, pero más frecuencia del banner adulto
+    const adType = adsCount % 5;
 
     if (adType === 0 || adType === 1) {
-      // 👀 Mostramos el banner 728x90 dos veces más que los demás
-      adHTML = getAdultBanner728x90();
+      // 728x90 aparece más veces
+      adHTML = getBanner728x90();
     } else if (adType === 2) {
-      adHTML = `
-        <script type="text/javascript">
-          atOptions = {
-            'key' : '5e168af377442dcd43ef7f4999dae819',
-            'format' : 'iframe',
-            'height' : 250,
-            'width' : 300,
-            'params' : {}
-          };
-        </script>
-        <script type="text/javascript" src="//www.highperformanceformat.com/5e168af377442dcd43ef7f4999dae819/invoke.js"></script>
-      `;
+      adHTML = getNativeBanner();
     } else {
-      adHTML = `
-        <script async="async" data-cfasync="false" src="//pl27912708.effectivegatecpm.com/feb5072d03cb15bc5abe1c885dd6e313/invoke.js"></script>
-        <div id="container-feb5072d03cb15bc5abe1c885dd6e313"></div>
-      `;
+      adHTML = getBanner300x250(); // banner secundario
     }
 
     adWrapper.innerHTML = adHTML;
@@ -70,27 +76,20 @@ export default function Publicidades() {
     setAdsCount((prev) => prev + 1);
   };
 
+  // Precargar anuncios iniciales para scroll rápido
   useEffect(() => {
-    const ensureScrollable = () => {
-      const { scrollHeight, clientHeight } = document.documentElement;
-      let added = 0;
-      while (scrollHeight <= clientHeight && added < 10) {
-        addAdBlock();
-        added++;
-      }
-    };
-
-    addAdBlock();
-    setTimeout(ensureScrollable, 800);
+    for (let i = 0; i < 6; i++) addAdBlock();
   }, []);
 
+  // Scroll infinito optimizado
   useEffect(() => {
     const handleScroll = () => {
       const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
-      if (scrollTop + clientHeight >= scrollHeight - 100) {
-        const blocksToAdd = Math.floor(Math.random() * 2) + 2;
-        for (let i = 0; i < blocksToAdd; i++) addAdBlock();
+      if (scrollTop + clientHeight >= scrollHeight - 150) {
+        // 🔹 Agrega 3 bloques de una vez
+        for (let i = 0; i < 3; i++) addAdBlock();
 
+        // Social Bar solo una vez
         if (!socialBarAdded.current && containerRef.current) {
           const socialBarWrapper = document.createElement("div");
           socialBarWrapper.style.margin = "40px 0";
