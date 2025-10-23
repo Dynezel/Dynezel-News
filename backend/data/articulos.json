@@ -84,6 +84,10 @@
         "alt": "Vladimir Kramnik durante una partida de ajedrez"
       },
       {
+      "tipo": "span",
+        "texto": "Vladimir Kramnik durante una partida de ajedrez."
+      },
+      {
         "tipo": "p",
         "texto": "Según informes, la FIDE está evaluando posibles medidas disciplinarias tras varios comentarios y publicaciones realizadas por Kramnik en línea, en los que ha cuestionado y criticado a otros jugadores, incluido Naroditsky."
       },
@@ -106,6 +110,57 @@
       {
         "tipo": "p",
         "texto": "La posible sanción marcaría otro capítulo en la relación tensa entre Kramnik y las instituciones oficiales del ajedrez, un conflicto que ha llamado la atención de toda la comunidad internacional."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "titulo": "Los Knicks inician la era Mike Brown con una victoria por 119-111 sobre los Cavaliers",
+    "autorTraduccion": "Dylan Fernández",
+    "fechaPublicacion": "2025-10-22",
+    "fuente": {
+      "tituloOriginal": "Knicks start Mike Brown era with hard-fought win over Cavaliers",
+      "medio": "New York Post",
+      "fecha": "2025-10-22",
+      "enlace": "https://nypost.com/2025/10/22/sports/knicks-start-mike-brown-era-with-hard-fought-win-over-cavaliers/"
+    },
+    "contenido": [
+      {
+        "tipo": "p",
+        "texto": "El equipo de los Knicks abrió la temporada 2025-26 con una victoria de 119-111 sobre los Cavaliers en el debut de Mike Brown al mando."
+      },
+      {
+        "tipo": "img",
+        "src": "/images/mike-brown.jpg",
+        "alt": "Mike Brown en una conferencia de prensa"
+      },
+      {
+        "tipo": "p",
+        "texto": "A pesar del empuje de Donovan Mitchell, que anotó 31 puntos para Cleveland, los Knicks respondieron con una carrera decisiva de 14-0 en el cuarto cuarto, dominando el ritmo del encuentro."
+      },
+      {
+        "tipo": "p",
+        "texto": "El entrenador Mike Brown apostó por una rotación profunda y un “baloncesto de equipo”, donde cinco jugadores anotaron en doble dígito."
+      },
+      {
+        "tipo": "p",
+        "texto": "Jugadores clave como OG Anunoby (24 puntos, 14 rebotes), Jalen Brunson (23 puntos), Mikal Bridges (16 puntos) y Karl-Anthony Towns (19 puntos) mostraron el carácter que Brown busca en esta plantilla."
+      },
+      {
+        "tipo": "span",
+        "texto": "La profundidad del banquillo también fue un factor crucial para esta victoria."
+      },
+      {
+        "tipo": "p",
+        "texto": "El suplente Miles McBride aportó 15 puntos y el equipo de reservas le ganó 35-30 al de Cleveland."
+      },
+      {
+        "tipo": "cita",
+        "texto": "“Las expectativas son extremadamente altas, pero no estamos cerca de donde podemos llegar. Eso lo hace emocionante.” — Mike Brown"
+      },
+      {
+        "tipo": "p",
+        "texto": "Este triunfo marca un buen inicio para la era de Mike Brown en los Knicks, pero también deja claro que queda mucho por mejorar. La temporada es larga y el equipo parece preparado para el reto."
       }
     ]
   }
