@@ -12,10 +12,23 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  "http://localhost:5173"
+];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "http://localhost:5173",
+  origin: function (origin, callback) {
+    // Permitir solicitudes sin origin (por ejemplo desde curl o server-side)
+    if (!origin) return callback(null, true);
+    if (allowedOrigins.includes(origin)) return callback(null, true);
+    console.warn(`❌ Bloqueado por CORS: ${origin}`);
+    return callback(new Error("No permitido por CORS"));
+  },
   methods: ["GET"],
+  credentials: true,
 }));
+
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "public/images")));
 
@@ -31,6 +44,7 @@ app.get("/api/articulos/:id", (req, res) => {
   if (!articulo) return res.status(404).json({ error: "No encontrado" });
   res.json(articulo);
 });
+
 app.get("/ping", (req, res) => res.send("pong"));
 
 const PORT = process.env.PORT || 3000;
