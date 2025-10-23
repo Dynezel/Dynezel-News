@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Homepage() {
   const [articulos, setArticulos] = useState([]);
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
     fetch(`${BACKEND_URL}/api/articulos`)

@@ -4,6 +4,7 @@ import { useParams, Link } from "react-router-dom";
 export default function Articulo() {
   const { id } = useParams();
   const [articulo, setArticulo] = useState(null);
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
     fetch(`${BACKEND_URL}/api/articulos/${id}`)
