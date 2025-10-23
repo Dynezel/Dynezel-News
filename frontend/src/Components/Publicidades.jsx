@@ -57,11 +57,12 @@ export default function Publicidades() {
         `;
         break;
       case 2:
-        adWrapper.innerHTML = `
-          <script async="async" data-cfasync="false" src="//pl27912708.effectivegatecpm.com/feb5072d03cb15bc5abe1c885dd6e313/invoke.js"></script>
-          <div id="container-feb5072d03cb15bc5abe1c885dd6e313"></div>
-        `;
-        break;
+  const uniqueId = `native-container-${Date.now()}-${Math.floor(Math.random() * 10000)}`;
+  adWrapper.innerHTML = `
+    <script async="async" data-cfasync="false" src="//pl27912708.effectivegatecpm.com/feb5072d03cb15bc5abe1c885dd6e313/invoke.js"></script>
+    <div id="${uniqueId}"></div>
+  `;
+  break;
       case 3:
         adWrapper.innerHTML = `
           <a href="https://www.effectivegatecpm.com/a0k4dfde5j?key=342c6df7fbcb7758465cf00fa38051d4"
