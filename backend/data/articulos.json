@@ -100,5 +100,151 @@
         "texto": "Este triunfo marca un buen inicio para la era de Mike Brown en los Knicks, pero también deja claro que queda mucho por mejorar. La temporada es larga y el equipo parece preparado para el reto."
       }
     ]
-  }
+  },
+  {
+    "id": 3,
+    "titulo": "Boca lo dio vuelta y venció 3-1 a Barracas Central",
+    "autorTraduccion": "Dylan Fernández",
+    "fechaPublicacion": "2025-10-27",
+    "fuente": {
+      "tituloOriginal": "Barracas Central vs Boca, por el Torneo Clausura: resumen y goles",
+      "medio": "Olé",
+      "fecha": "2025-10-27",
+      "enlace": "https://www.ole.com.ar/futbol-primera/barracas-central-vs-boca-partido-torneo-clausura-2025-fecha-12-vivo_0_HBMNDULi3E.html"
+    },
+    "contenido": [
+      {
+        "tipo": "p",
+        "texto": "Boca Juniors logró una remontada y venció 3-1 a Barracas Central en el partido del 27 de octubre de 2025, en una presentación que revirtió el gol inicial del conjunto local."
+      },
+      {
+        "tipo": "img",
+        "src": "/images/boca-barracas-2025-3-1.jpg",
+        "alt": "Celebración de Boca tras el triunfo 3-1 ante Barracas Central"
+      },
+      {
+        "tipo": "p",
+        "texto": "Barracas se adelantó en el primer tiempo con un tanto de Rodrigo Insúa que sorprendió desde fuera del área y puso el 1-0 parcial."
+      },
+      {
+        "tipo": "p",
+        "texto": "En la segunda mitad Boca cambió la cara del partido: Milton Giménez anotó un doblete que dio vuelta el marcador y colocó el 2-1."
+      },
+      {
+        "tipo": "p",
+        "texto": "El tercer gol lo firmó Miguel Merentiel en una contra bien ejecutada por Boca, que selló el 3-1 definitivo y aseguró los tres puntos."
+      },
+      {
+        "tipo": "span",
+        "texto": "Giménez fue la figura con sus dos goles."
+      },
+      {
+        "tipo": "p",
+        "texto": "El equipo visitante mostró más llegada y control en los minutos finales, mientras que Barracas no pudo sostener la ventaja inicial."
+      },
+      {
+        "tipo": "cita",
+        "texto": "“Vinimos a ganar y lo conseguimos con actitud” — declaró Milton Giménez al término del encuentro."
+      },
+      {
+        "tipo": "p",
+        "texto": "Con el triunfo, Boca suma puntos clave en la pelea por el Torneo Clausura y se ilusiona con mantener la regularidad en las próximas fechas."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "titulo": "Santiago Sosa fue operado con éxito tras la fractura sufrida y Racing apunta al duelo ante Flamengo",
+    "autorTraduccion": "Dylan Fernández",
+    "fechaPublicacion": "2025-10-24",
+    "fuente": {
+      "tituloOriginal": "El sentido mensaje de Santiago Sosa tras la operación por la fractura sufrida ante Flamengo",
+      "medio": "MDZ Online",
+      "fecha": "2025-10-23",
+      "enlace": "https://www.mdzol.com/deportes/el-sentido-mensaje-santiago-sosa-ser-operado-la-fractura-que-sufrio-flamengo-con-el-corazon-la-cancha-n1372076/"
+    },
+    "contenido": [
+      {
+        "tipo": "p",
+        "texto": "Santiago Sosa, mediocampista de Racing, fue operado con éxito tras la dura fractura que sufrió en el partido de ida frente a Flamengo, correspondiente a las semifinales de la Copa Libertadores."
+      },
+      {
+        "tipo": "p",
+        "texto": "El jugador publicó un mensaje en redes sociales agradeciendo el apoyo recibido: 'Con el corazón en la cancha, me toca recuperarme, pero volveré más fuerte'."
+      },
+      {
+        "tipo": "img",
+        "src": "/images/sosa-racing-lesion.jpg",
+        "alt": "Santiago Sosa luego de su lesión ante Flamengo"
+      },
+      {
+        "tipo": "p",
+        "texto": "El golpe, producto de una fuerte entrada de Marcos Rojo, generó una ola de críticas por parte de los hinchas y del cuerpo técnico académico."
+      },
+      {
+        "tipo": "span",
+        "texto": "Racing piensa en la vuelta"
+      },
+      {
+        "tipo": "p",
+        "texto": "Con la ausencia confirmada de Sosa, Gustavo Costas prepara el equipo que visitará a Flamengo en el Maracaná. Racing necesita revertir el 0-1 de la ida para acceder a la final continental."
+      },
+      {
+        "tipo": "p",
+        "texto": "Se espera que Juan Nardoni o Aníbal Moreno ocupen su lugar en el mediocampo, mientras que el resto del plantel se mantiene a disposición."
+      },
+      {
+        "tipo": "cita",
+        "texto": "“Vamos a dejar todo por él y por nuestra gente. Este grupo tiene carácter.” — Gustavo Costas, DT de Racing."
+      }
+    ]
+  },
+  {
+  "id": 5,
+  "titulo": "Lanús buscará sellar la final en casa frente a la U de Chile en la revancha",
+  "autorTraduccion": "Dylan Fernández",
+  "fechaPublicacion": "2025-10-29",
+  "fuente": {
+    "tituloOriginal": "Lanús vs U de Chile por la vuelta de Copa Sudamericana: a qué hora y dónde ver en vivo",
+    "medio": "El Dínamo",
+    "fecha": "2025-10-28",
+    "enlace": "https://www.eldinamo.cl/deportes/2025/10/28/lanus-vs-u-de-chile-por-la-vuelta-de-copa-sudamericana-a-que-hora-y-donde-ver-en-vivo-la-semifinal-por-tv-y-streaming/"
+  },
+  "contenido": [
+    {
+      "tipo": "p",
+      "texto": "Lanús recibirá este jueves 30 de octubre a la Universidad de Chile en el Estadio Ciudad de Lanús, desde las 19:00 (hora argentina), con el objetivo de definir la serie y conseguir su pasaje a la final de la Copa Sudamericana."
+    },
+    {
+      "tipo": "img",
+      "src": "/images/lanus-vs-udechile-sudamericana.jpg",
+      "alt": "Lanús y Universidad de Chile disputan un balón en el partido de ida"
+    },
+    {
+      "tipo": "p",
+      "texto": "Después de empatar 2-2 en Santiago en el partido de ida, la llave quedó totalmente abierta. Lanús tendrá la ventaja de jugar ante su gente, mientras que la U deberá plantear un partido ofensivo con firmeza defensiva."
+    },
+    {
+      "tipo": "p",
+      "texto": "Entre las bajas confirmadas para la U se encuentra Lucas Assadi, quien sufre una lesión muscular. Esto obliga al técnico Gustavo Álvarez a ajustar su esquema para la revancha."
+    },
+    {
+      "tipo": "span",
+      "texto": "Decidirán en Buenos Aires"
+    },
+    {
+      "tipo": "p",
+      "texto": "Lanús llega con confianza tras una racha de partidos invicto en casa y espera capitalizar esa energía frente a su público. Con Pellegrino manteniendo al equipo titular, se espera una alineación agresiva."
+    },
+    {
+      "tipo": "cita",
+      "texto": "“Tenemos claro a qué jugamos esta serie y no pensamos en otra cosa que ganar” — declaraciones del cuerpo técnico de Lanús."
+    },
+    {
+      "tipo": "p",
+      "texto": "La transmisión del partido será por ESPN y DSports, mientras que quienes prefieran seguirlo por streaming podrán verlo vía Disney+ y DGO."
+    }
+  ]
+}
 ]
+
