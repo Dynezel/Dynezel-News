@@ -31,8 +31,14 @@ app.use("/images", express.static(path.join(__dirname, "public/images")));
 
 // API de noticias
 app.get("/api/articulos", (req, res) => {
-  const data = JSON.parse(fs.readFileSync(path.join(__dirname, "data/articulos.json"), "utf-8"));
-  res.json(data);
+  const data = JSON.parse(
+    fs.readFileSync(path.join(__dirname, "data/articulos.json"), "utf-8")
+  );
+
+  // Ordenar por id de mayor a menor
+  const sortedData = data.sort((a, b) => b.id - a.id);
+
+  res.json(sortedData);
 });
 
 app.get("/api/articulos/:id", (req, res) => {

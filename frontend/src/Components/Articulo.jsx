@@ -13,32 +13,6 @@ export default function Articulo() {
       .catch(err => console.error(err));
   }, [id]);
 
-  //useEffect para ads:
-  useEffect(() => {
-  if (!articulo) return; // Esperar a que el artículo esté cargado
-
-  const adContainer = document.getElementById("adsterra-article-banner");
-  if (!adContainer) return;
-
-  window.atOptions = {
-    key: "5e168af377442dcd43ef7f4999dae819",
-    format: "iframe",
-    height: 250,
-    width: 300,
-    params: {},
-  };
-
-  const script = document.createElement("script");
-  script.type = "text/javascript";
-  script.src = "//www.highperformanceformat.com/5e168af377442dcd43ef7f4999dae819/invoke.js";
-
-  adContainer.appendChild(script);
-
-  return () => {
-    adContainer.innerHTML = "";
-    delete window.atOptions;
-  };
-}, [articulo]);
 
   if (!articulo) return <p className="loading">Cargando artículo...</p>;
 
@@ -95,15 +69,6 @@ export default function Articulo() {
           </p>
         )}
       </main>
-      <div
-  id="adsterra-article-banner"
-  style={{
-    display: "flex",
-    justifyContent: "center",
-    marginTop: "20px",
-    opacity: 0.9,
-  }}
-></div>
     </div>
   );
 }
