@@ -245,6 +245,53 @@
       "texto": "La transmisión del partido será por ESPN y DSports, mientras que quienes prefieran seguirlo por streaming podrán verlo vía Disney+ y DGO."
     }
   ]
+},
+{
+  "id": 6,
+  "titulo": "Racing quedó eliminado y Flamengo avanzó a la final de la Copa Libertadores",
+  "autorTraduccion": "Dylan Fernández",
+  "fechaPublicacion": "2025-10-30",
+  "fuente": {
+    "tituloOriginal": "Racing vs Flamengo por semifinal de Copa Libertadores: empate 0-0 en el Cilindro y pase de los brasileños",
+    "medio": "ESPN",
+    "fecha": "2025-10-29",
+    "enlace": "https://www.espn.com.ar/futbol/copa-libertadores/nota/_/id/15880237/racing-vs-flamengo-partido-vuelta-semifinales-copa-libertadores-2025-equipo-fecha-hora-y-tv-en-vivo"
+  },
+  "contenido": [
+    {
+      "tipo": "p",
+      "texto": "Racing no logró romper el cero ante Flamengo El Cilindro de Avellaneda, y se despidió de la Copa Libertadores tras empatar 0-0 en la vuelta de las semifinales. El conjunto brasileño avanzó a la final gracias al 1-0 conseguido en la ida en Río de Janeiro."
+    },
+    {
+      "tipo": "img",
+      "src": "/images/rossi.jpeg",
+      "alt": "Agustin Rossi"
+    },
+    {
+      "tipo": "p",
+      "texto": "El equipo dirigido por Gustavo Costas intentó imponer su estilo desde el inicio, pero la sólida defensa del Flamengo y del arquero Agustín Rossi impidieron que la Academia encontrara la profundidad necesaria."
+    },
+    {
+      "tipo": "p",
+      "texto": "A pesar de dominar la posesión y generar más ocasiones, Racing no logró capitalizar. En el segundo tiempo, con un hombre más tras la expulsión de Gonzalo Plata en Flamengo, la Academia levantó su propuesta ofensiva, pero se encontró con un muro defensivo y con mala definición."
+    },
+    {
+      "tipo": "span",
+      "texto": "Flamengo, a otra final"
+    },
+    {
+      "tipo": "p",
+      "texto": "Flamengo, con su vocación pragmática y la presión de jugar ante 50 mil hinchas visitantes, controló los tiempos del partido. Con este resultado, se aseguró su lugar en una nueva final continental, reafirmando su dominio en las últimas ediciones del torneo."
+    },
+    {
+      "tipo": "cita",
+      "texto": "“Nos vamos a jugar el sueño entre todos de poder ir a Lima... Poder no. VAMOS A IR A LIMA ❤️🖤 - Cuenta de Twitter (Ahora X) de Flamengo en Esáñol"
+    },
+    {
+      "tipo": "p",
+      "texto": "Ahora, Flamengo espera por su rival en la final de la Libertadores, mientras Racing deberá analizar su camino europeo y sudamericano para volver a soñar con esta copa."
+    }
+  ]
 }
 ]
 
