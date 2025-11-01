@@ -2,17 +2,16 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 
 export default function Articulo() {
-  const { id } = useParams();
+  const { slug } = useParams();
   const [articulo, setArticulo] = useState(null);
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
-    fetch(`${BACKEND_URL}/api/articulos/${id}`)
-      .then(res => res.json())
-      .then(data => setArticulo(data))
-      .catch(err => console.error(err));
-  }, [id]);
-
+  fetch(`${BACKEND_URL}/api/articulos/${slug}`)
+    .then(res => res.json())
+    .then(data => setArticulo(data))
+    .catch(err => console.error(err));
+}, [slug]);
 
   if (!articulo) return <p className="loading">Cargando artículo...</p>;
 

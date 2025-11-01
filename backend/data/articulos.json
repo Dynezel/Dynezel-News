@@ -2,6 +2,7 @@
   {
     "id": 1,
     "titulo": "Vladimir Kramnik podría enfrentar sanciones por su trato hacia Daniel Naroditsky",
+    "slug": "vladimir-kramnik-podría-enfrentar-sanciones-por-su-trato-hacia-daniel-naroditsky",
     "autorTraduccion": "Dylan Fernández",
     "fechaPublicacion": "2025-10-23",
     "fuente": {
@@ -53,6 +54,7 @@
   {
     "id": 2,
     "titulo": "Los Knicks inician la era Mike Brown con una victoria por 119-111 sobre los Cavaliers",
+    "slug" : "los-knicks-inician-la-era-mike-brown-con-una-victoria-por-119-111-sobre-los-cavaliers",
     "autorTraduccion": "Dylan Fernández",
     "fechaPublicacion": "2025-10-22",
     "fuente": {
@@ -104,6 +106,7 @@
   {
     "id": 3,
     "titulo": "Boca lo dio vuelta y venció 3-1 a Barracas Central",
+    "slug": "boca-lo-dio-vuelta-y-vencio-3-1-a-barracas-central",
     "autorTraduccion": "Dylan Fernández",
     "fechaPublicacion": "2025-10-27",
     "fuente": {
@@ -155,6 +158,7 @@
   {
     "id": 4,
     "titulo": "Santiago Sosa fue operado con éxito tras la fractura sufrida y Racing apunta al duelo ante Flamengo",
+    "slug": "santiago-sosa-fue-operado-con-exito-tras-la-fractura-sufrida-y-racing-apunta-al-duelo-ante-flamengo",
     "autorTraduccion": "Dylan Fernández",
     "fechaPublicacion": "2025-10-24",
     "fuente": {
@@ -202,6 +206,7 @@
   {
   "id": 5,
   "titulo": "Lanús buscará sellar la final en casa frente a la U de Chile en la revancha",
+  "slug": "lanus-buscara-sellar-la-semifinal-en-casa-frente-a-la-u-de-chile-en-la-revancha",
   "autorTraduccion": "Dylan Fernández",
   "fechaPublicacion": "2025-10-29",
   "fuente": {
@@ -249,6 +254,7 @@
 {
   "id": 6,
   "titulo": "Racing quedó eliminado y Flamengo avanzó a la final de la Copa Libertadores",
+  "slug": "racing-quedo-eliminado-y-flamengo-avanzo-a-la-final-de-la-copa-libertadores",
   "autorTraduccion": "Dylan Fernández",
   "fechaPublicacion": "2025-10-30",
   "fuente": {
@@ -294,8 +300,9 @@
   ]
 },
 {
-  "id": 11,
+  "id": 7,
   "titulo": "Palmeiras va por la hazaña: necesita remontar un 0-3 ante Liga de Quito para llegar a la final",
+  "slug": "palmeiras-va-por-la-hazana-necesita-remontar-un-0-3-ante-liga-de-quito-para-llegar-a-la-final",
   "autorTraduccion": "Dylan Fernández",
   "fechaPublicacion": "2025-10-29",
   "fuente": {
