@@ -7,13 +7,26 @@ export default function Articulo() {
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
-  fetch(`${BACKEND_URL}/api/articulos/${slug}`)
-    .then(res => res.json())
-    .then(data => setArticulo(data))
-    .catch(err => console.error(err));
-}, [slug]);
+    fetch(`${BACKEND_URL}/api/articulos/${slug}`)
+      .then(res => {
+        if (!res.ok) throw new Error("Artículo no encontrado");
+        return res.json();
+      })
+      .then(data => setArticulo(data))
+      .catch(err => {
+        console.error(err);
+        setArticulo({ error: true });
+      });
+  }, [slug]);
+
+  useEffect(() => {
+    if (articulo?.titulo) {
+      document.title = `${articulo.titulo} — Dynezel News`;
+    }
+  }, [articulo]);
 
   if (!articulo) return <p className="loading">Cargando artículo...</p>;
+  if (articulo.error) return <p className="not-found">❌ Artículo no encontrado.</p>;
 
   return (
     <div className="container">
@@ -32,7 +45,7 @@ export default function Articulo() {
         )}
 
         <div className="article-body">
-          {articulo.contenido.map((bloque, i) => {
+          {articulo.contenido?.map((bloque, i) => {
             switch (bloque.tipo) {
               case "p":
                 return <p key={i}>{bloque.texto}</p>;
