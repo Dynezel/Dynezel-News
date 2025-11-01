@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .article-item {
+    flex-direction: column;
+  }
+
+  .article-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .news-header-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .news-nav {
+    gap: 10px;
+  }
+
+  .news-title {
+    font-size: 1.8rem;
+  }
+}

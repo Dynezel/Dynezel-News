@@ -1,0 +1,56 @@
+/* === HOMEPAGE === */
+.main-content {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.articles-list {
+  flex: 3;
+  margin-left: 3%;
+}
+
+.article-item {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.article-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.article-image img {
+  width: 260px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.article-text {
+  flex: 1;
+}
+
+.article-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-secondary);
+  transition: color 0.2s;
+}
+
+.article-title:hover {
+  color: var(--color-primary);
+}
+
+.article-meta {
+  color: var(--color-muted);
+  font-size: 0.9rem;
+  margin-top: 6px;
+}
