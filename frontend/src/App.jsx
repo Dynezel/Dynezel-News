@@ -7,6 +7,7 @@ import {
   Navigate,
   useParams
 } from "react-router-dom";
+import { useEffect, useState } from "react";
 import Homepage from "./Components/Homepage";
 import Articulo from "./Components/Articulo";
 import Header from "./Components/Header";
