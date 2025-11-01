@@ -74,26 +74,31 @@ app.get("/api/articulos", (req, res) => {
   res.json(sortedData);
 });
 
-// ✅ Compatibilidad vieja: buscar por ID directo
+// ✅ Buscar por ID directo (para compatibilidad con /id/12)
 app.get("/api/articulos/id/:id", (req, res) => {
   const articulo = articulos.find(a => a.id == req.params.id);
   if (!articulo) return res.status(404).json({ error: "No encontrado" });
   res.json(articulo);
 });
 
-// ✅ NUEVA: redirigir automáticamente /api/articulos/12 → /api/articulos/slug
-app.get("/api/articulos/:id(\\d+)", (req, res) => {
-  const articulo = articulos.find(a => a.id == req.params.id);
+// ✅ Redirigir /api/articulos/12 → /api/articulos/palmeiras-va-por-la-hazana...
+app.get("/api/articulos/:id", (req, res, next) => {
+  const { id } = req.params;
+
+  // Si el parámetro no es un número → dejar que lo maneje la ruta /:slug
+  if (!/^\d+$/.test(id)) return next();
+
+  const articulo = articulos.find(a => a.id == id);
   if (!articulo) return res.status(404).json({ error: "No encontrado" });
 
-  // Construir nueva URL
   const nuevaUrl = `/api/articulos/${articulo.slug}`;
   console.log(`↪️ Redirigiendo ${req.originalUrl} → ${nuevaUrl}`);
 
   return res.redirect(301, nuevaUrl);
 });
 
-// ✅ Buscar por slug (nuevo)
+
+// ✅ Buscar por slug
 app.get("/api/articulos/:slug", (req, res) => {
   const articulo = articulos.find(a => a.slug === req.params.slug);
   if (!articulo) return res.status(404).json({ error: "No encontrado" });
