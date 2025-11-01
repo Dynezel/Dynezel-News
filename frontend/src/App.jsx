@@ -5,6 +5,7 @@ import {
   createRoutesFromElements,
   Outlet,
   Navigate,
+  useParams
 } from "react-router-dom";
 import Homepage from "./Components/Homepage";
 import Articulo from "./Components/Articulo";
