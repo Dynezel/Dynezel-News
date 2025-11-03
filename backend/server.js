@@ -107,5 +107,42 @@ app.get("/api/articulos/:slug", (req, res) => {
 
 app.get("/ping", (req, res) => res.send("pong"));
 
+app.get("/sitemap.xml", (req, res) => {
+  const data = JSON.parse(
+    fs.readFileSync(path.join(__dirname, "data/articulos.json"), "utf-8")
+  );
+
+  const urls = data
+    .map(
+      a => `
+    <url>
+      <loc>https://dynezel-news.onrender.com/articulo/${a.slug}</loc>
+      <lastmod>${new Date().toISOString()}</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+    </url>`
+    )
+    .join("");
+
+  res.header("Content-Type", "application/xml");
+  res.send(`<?xml version="1.0" encoding="UTF-8"?>
+  <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>https://dynezel-news.onrender.com/</loc>
+      <changefreq>daily</changefreq>
+      <priority>1.0</priority>
+    </url>
+    ${urls}
+  </urlset>`);
+});
+
+// 🤖 Robots.txt
+app.get("/robots.txt", (req, res) => {
+  res.type("text/plain");
+  res.send(`User-agent: *
+Allow: /
+Sitemap: https://dynezel-news.onrender.com/sitemap.xml`);
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`✅ Servidor corriendo en puerto ${PORT}`));
