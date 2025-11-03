@@ -6,6 +6,11 @@ export default function Homepage() {
   const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
   useEffect(() => {
+    // 📰 Cargar artículos
+    fetch(`${BACKEND_URL}/api/articulos`)
+      .then(res => res.json())
+      .then(data => setArticulos(data))
+      .catch(err => console.error("Error cargando artículos:", err));
   // 🧠 SEO dinámico de Homepage
   const title = "Dynezel News — Noticias independientes en español";
   document.title = title;
