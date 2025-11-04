@@ -554,7 +554,50 @@
       "texto": "El 29 de noviembre, Lima será testigo de una final entre dos gigantes del continente. El ‘Verdão’ y el ‘Mengão’ se preparan para escribir un nuevo capítulo en la historia de la Copa Libertadores."
     }
   ]
+},
+{
+  "id": 12,
+  "titulo": "Cristiano Ronaldo reaviva la polémica: “¿Messi mejor que yo? No estoy de acuerdo”",
+  "slug": "cristiano-ronaldo-reaviva-la-polemica-messi-mejor-que-yo-no-estoy-de-acuerdo",
+  "autorTraduccion": "Dylan Fernández",
+  "fechaPublicacion": "2025-11-04",
+  "fuente": {
+    "tituloOriginal": "Cristiano Ronaldo reavivó el debate: '¿Messi mejor que yo? No estoy de acuerdo'",
+    "medio": "ESPN",
+    "fecha": "2025-11-04",
+    "enlace": "https://www.espn.com.ar/futbol/nota/_/id/13660180/cristiano-ronaldo-messi-mejor-entrevista-piers-morgan"
+  },
+  "contenido": [
+    {
+      "tipo": "p",
+      "texto": "Cristiano Ronaldo volvió a encender uno de los debates más intensos del fútbol moderno: su eterna comparación con Lionel Messi. En un adelanto de una entrevista con el periodista británico Piers Morgan, el portugués aseguró no estar de acuerdo con quienes consideran que el argentino es superior."
+    },
+    {
+      "tipo": "img",
+      "src": "/images/messi-ronaldo.jpeg",
+      "alt": "Cristiano Ronaldo y Lionel Messi"
+    },
+    {
+      "tipo": "cita",
+      "texto": "“¿Es Messi mejor que yo? No estoy de acuerdo. No quiero ser humilde”, declaró Cristiano en el avance de la charla."
+    },
+    {
+      "tipo": "p",
+      "texto": "Será la segunda entrevista entre Ronaldo y Piers Morgan, luego de la recordada conversación de 2022 que marcó su salida del Manchester United, tras críticas hacia su entonces entrenador Erik ten Hag y varios compañeros del club inglés."
+    },
+    {
+      "tipo": "p",
+      "texto": "El portugués, actualmente figura del Al Nassr en Arabia Saudita, rememoró los años de rivalidad directa con Messi, especialmente durante su etapa en el Real Madrid (2009–2018), cuando ambos dominaron LaLiga española y se repartieron títulos y récords goleadores."
+    },
+    {
+      "tipo": "p",
+      "texto": "En cuanto a logros, Cristiano acumula cinco Champions League, una más que el argentino, mientras que Messi posee ocho Balones de Oro frente a los cinco del luso. En el plano internacional, Ronaldo conquistó la Eurocopa 2016 y dos ediciones de la Nations League (2019 y 2025), mientras que Messi rompió la sequía de títulos con Argentina al ganar la Copa América 2021, la Finalissima 2022 y el Mundial de Qatar ese mismo año, además de la Copa América 2024."
+    },
+    {
+      "tipo": "p",
+      "texto": "La entrevista completa se emitirá esta semana y promete revivir una discusión que, pese al paso de los años y las diferentes etapas de sus carreras, sigue dividiendo opiniones en todo el mundo futbolístico."
+    }
+  ]
 }
-
 ]
 
