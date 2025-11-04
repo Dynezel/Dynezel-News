@@ -565,7 +565,7 @@
     "tituloOriginal": "Cristiano Ronaldo reavivó el debate: '¿Messi mejor que yo? No estoy de acuerdo'",
     "medio": "ESPN",
     "fecha": "2025-11-04",
-    "enlace": "https://www.espn.com.ar/futbol/nota/_/id/13660180/cristiano-ronaldo-messi-mejor-entrevista-piers-morgan"
+    "enlace": "https://www.espn.com.ar/futbol/clubes/nota/_/id/15912853/cristiano-ronaldo-reavivo-el-debate-messi-mejor-que-yo-no-estoy-de-acuerdo"
   },
   "contenido": [
     {
@@ -596,6 +596,58 @@
     {
       "tipo": "p",
       "texto": "La entrevista completa se emitirá esta semana y promete revivir una discusión que, pese al paso de los años y las diferentes etapas de sus carreras, sigue dividiendo opiniones en todo el mundo futbolístico."
+    }
+  ]
+},
+{
+  "id": 13,
+  "titulo": "Argentina debutó con una remontada ante Bélgica en el Mundial Sub 17 de Qatar",
+  "slug": "argentina-debuto-con-una-remontada-ante-belgica-en-el-mundial-sub-17-de-qatar",
+  "autorTraduccion": "Dylan Fernández",
+  "fechaPublicacion": "2025-11-04",
+  "fuente": {
+    "tituloOriginal": "Argentina le ganó a Bélgica en un partidazo en el debut del Mundial Sub 17",
+    "medio": "ESPN",
+    "fecha": "2025-11-03",
+    "enlace": "https://www.espn.com.ar/futbol/nota/_/id/15890773/seleccion-argentina-vs-belgica-debut-mundial-sub-17-equipo-fecha-hora-tv-en-vivo"
+  },
+  "contenido": [
+    {
+      "tipo": "p",
+      "texto": "La Selección Argentina Sub 17 comenzó con el pie derecho su camino en el Mundial de Qatar 2025 al vencer 3-2 a Bélgica, en un emocionante encuentro disputado en el estadio Aspire Zone Pitch 2."
+    },
+    {
+      "tipo": "img",
+      "src": "/images/argentina-sub17-belgica.jpeg",
+      "alt": "La Selección Argentina Sub 17 celebrando un gol ante Bélgica en el Mundial de Qatar"
+    },
+    {
+      "tipo": "span",
+      "texto": "La Selección Argentina Sub 17 celebrando un gol ante Bélgica en el Mundial de Qatar 2025."
+    },
+    {
+      "tipo": "p",
+      "texto": "El equipo dirigido por Diego Placente mostró carácter y buen juego para revertir un marcador adverso, logrando una victoria fundamental ante uno de los rivales más duros del Grupo D."
+    },
+    {
+      "tipo": "p",
+      "texto": "Ramiro Tulián, Facundo Jainikoski y Felipe Esquivel fueron los autores de los goles argentinos en una actuación que reflejó la identidad futbolística que busca imponer Placente: intensidad, juego asociado y determinación."
+    },
+    {
+      "tipo": "p",
+      "texto": "A los 36 minutos del primer tiempo, Tulián abrió el marcador tras un gran desborde y centro desde la derecha de Santiago Silveira. Sin embargo, Bélgica empató en la última jugada de la etapa inicial con un remate cruzado de Arthur De Kimpe."
+    },
+    {
+      "tipo": "p",
+      "texto": "En el complemento, los europeos dieron vuelta el resultado con un tanto de Stan Naert, pero la Albiceleste reaccionó con contundencia. A los 69 minutos, Jainikoski igualó el marcador con una definición precisa, y apenas dos minutos después asistió a Esquivel para sellar el 3-2 definitivo con una gran jugada individual."
+    },
+    {
+      "tipo": "cita",
+      "texto": "“Este grupo tiene hambre, talento y un compromiso enorme con la camiseta”, destacó Placente tras el triunfo."
+    },
+    {
+      "tipo": "p",
+      "texto": "Con esta victoria, Argentina inicia su sueño de conquistar el único título mundial que aún falta en las vitrinas de la AFA. La próxima presentación será ante uno de los rivales restantes del grupo, en busca de asegurar la clasificación a los octavos de final."
     }
   ]
 }
