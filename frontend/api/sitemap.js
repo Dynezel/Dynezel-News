@@ -1,3 +1,10 @@
+export const config = {
+  api: {
+    responseLimit: false,
+    bodyParser: false,
+  },
+};
+
 export default async function handler(req, res) {
   try {
     const backendUrl = "https://dynezel-news.onrender.com/sitemap.xml";
@@ -11,7 +18,6 @@ export default async function handler(req, res) {
 
     const xml = await response.text();
 
-    // ⚠️ Evita que Vercel intente procesarlo como JSON
     res.setHeader("Content-Type", "application/xml; charset=utf-8");
     res.status(200).send(xml);
   } catch (error) {
